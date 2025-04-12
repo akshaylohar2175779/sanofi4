@@ -32,7 +32,7 @@
 				<configuration>
 <cloudHubDeployment>
 <uri>https://anypoint.mulesoft.com</uri>
-<muleVersion>4.3.0</muleVersion>
+<muleVersion>4.4.0</muleVersion>
 <username>Amule8989</username>
 <password>Amule@123</password>
 <applicationName>CICD-Test</applicationName>
