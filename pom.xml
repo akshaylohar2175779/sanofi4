@@ -30,18 +30,29 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudHub2Deployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>${app.runtime}</muleVersion>
-						<username>Amule8989</username>
-						<password>Amule@123</password>
-						<applicationName>cic</applicationName>
-						<environment>Sandbox</environment>
-						<workers>1</workers>
-						<workerType>Micro</workerType>
-						<objectStoreV2>true</objectStoreV2>
-					</cloudHub2Deployment>
+				    <cloudhub2Deployment>
+				      <uri>https://anypoint.mulesoft.com</uri>
+				      <provider>MC</provider>
+				      <environment>Sandbox</environment>
+				      <target>${targetName}</target>
+				      <muleVersion>${muleVersion}</muleVersion>
+				      <username>Amule8989</username>
+				      <password>Amule@123</password>
+				      <applicationName>${appName}</applicationName>
+				      <replicas>1</replicas>
+				      <vCores>1</vCores>
+				      <deploymentSettings>
+				        <http>
+				          <inbound>
+				            <publicUrl>${publicURL}</publicUrl>
+				            <forwardSslSession>true</forwardSslSession>
+				            <lastMileSecurity>true</lastMileSecurity>
+				          </inbound>
+				        </http>
+				      </deploymentSettings>
+				    </cloudhub2Deployment>
 				</configuration>
+				
 			</plugin>
 		</plugins>
 	</build>
