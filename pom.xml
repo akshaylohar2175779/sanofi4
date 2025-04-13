@@ -30,21 +30,19 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-<cloudHub2Deployment>
-<uri>https://anypoint.mulesoft.com</uri>
-<muleVersion>4.3.0</muleVersion>
-<username>Amule8989</username>
-<password>Amule@123</password>
-<applicationName>cic</applicationName>
-<environment>Sandbox</environment>
-<workers>1</workers>
-<workerType>Micro</workerType>
-<objectStoreV2>true</objectStoreV2>
-</cloudHub2Deployment>
-</configuration>
+					<cloudHub2Deployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${app.runtime}</muleVersion>
+						<username>Amule8989</username>
+						<password>Amule@123</password>
+						<applicationName>cic</applicationName>
+						<environment>Sandbox</environment>
+						<workers>1</workers>
+						<workerType>Micro</workerType>
+						<objectStoreV2>true</objectStoreV2>
+					</cloudHub2Deployment>
+				</configuration>
 			</plugin>
-			
-			
 		</plugins>
 	</build>
 
